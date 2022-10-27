@@ -8,7 +8,7 @@ import jakarta.servlet.http.HttpServletResponse;
 
 import java.io.IOException;
 
-@WebServlet(name = "NewContactRegistration", value = "/NewContactRegistration")
+@WebServlet(name = "NewContactRegistration", value = "/new-contact-registration")
 public class NewContactRegistration extends HttpServlet {
 	
 	@Override
