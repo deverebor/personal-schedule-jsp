@@ -161,7 +161,7 @@
 
     <img
       loading="lazy"
-      src="https://img.icons8.com/ios-glyphs/30/000000/return.png"
+      src="https://img.icons8.com/ios-glyphs/30/FFFFFF/return.png"
       alt=""
     />
   </button>

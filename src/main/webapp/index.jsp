@@ -32,6 +32,8 @@
 			--green-300: #00B37E;
 			--green-500: #00875f;
 
+			--blue-300: #1f8cff;
+
 			--red-500: #F75A68;
 		}
 
@@ -61,40 +63,143 @@
 			font-size: 1rem;
 			font-weight: 400;
 		}
+
+		.registration {
+			display: flex;
+			flex-direction: column;
+			place-content: center;
+			place-items: center;
+			margin-block-start: 45vh;
+		}
+
+		.registration__header-title {
+			font-size: 32px;
+			font-weight: 700;
+			color: var(--blue-300);
+		}
+
+		.registration__header-subtitle {
+			font-size: 24px;
+			font-weight: 400;
+			margin-block-start: 16px;
+			margin-block-end: 32px;
+		}
+
+		.registration__form-label,
+		.registration__form-label-input {
+			font-size: 16px;
+			text-align: start;
+		}
+
+		.registration__form-label {
+			display: flex;
+			padding-block-start: 16px;
+			width: 32%;
+		}
+
+		.registration__button {
+			margin-block-start: 48px;
+			display: flex;
+			justify-content: space-between;
+			place-content: center;
+			place-items: center;
+			width: 200px;
+			height: 40px;
+			border: none;
+			border-radius: 8px;
+			background-color: var(--green-300);
+			color: var(--white);
+			font-size: 16px;
+			font-weight: 700;
+			cursor: pointer;
+			transition: filter 0.2s;
+		}
+
+		.registration__button:hover {
+			filter: brightness(0.9);
+		}
+
+		.registration__button img {
+			color: var(--white);
+			width: 24px;
+			height: 24px;
+			margin-inline-start: 8px;
+			transition: all 0.3s ease-in-out;
+		}
+
+		.registration__button:hover img {
+			transform: rotate(90deg);
+			width: 32px;
+			height: 32px;
+		}
   </style>
 </head>
 <body>
-<section>
-  <h1> Agenda Pessoal. </h1>
-  <h2> Cadastre um novo contato! </h2>
+<section class="registration">
+  <header class="registration__header">
+    <h1 class="registration__header-title"> Agenda Pessoal. </h1>
+    <h2 class="registration__header-subtitle"> Cadastre um novo contato! </h2>
+  </header>
 
-  <form action="new-contact-registration" method="POST">
-    <label for="name">Nome:</label>
-    <input
-      type="text"
-      name="name"
-      id="name"
-      placeholder="Digite o nome"
-    />
+  <form
+    class="registration__form"
+    action="new-contact-registration"
+    method="POST"
+  >
+    <label
+      class="registration__form-label"
+      for="name"
+    >
+      Nome:
 
-    <label for="lastName">Sobrenome:</label>
-    <input
-      type="text"
-      name="lastName"
-      id="lastName"
-      placeholder="Digite o sobrenome"
-    />
+      <input
+        class="registration__form-label-input"
+        type="text"
+        name="name"
+        id="name"
+        placeholder="Digite o nome"
+      />
+    </label>
 
-    <label for="telephone">Telefone:</label>
-    <input
-      type="text"
-      name="telephone"
-      id="telephone"
-      placeholder="Digite o telefone"
-    />
 
-    <button type="submit">
+    <label
+      class="registration__form-label"
+      for="lastName"
+    >
+      Sobrenome:
+
+      <input
+        class="registration__form-label-input"
+        type="text"
+        name="lastName"
+        id="lastName"
+        placeholder="Digite o sobrenome"
+      />
+    </label>
+
+    <label
+      class="registration__form-label"
+      for="telephone"
+    >
+      Telefone:
+
+      <input
+        class="registration__form-label-input"
+        type="text"
+        name="telephone"
+        id="telephone"
+        placeholder="Digite o telefone"
+      />
+    </label>
+
+    <button class="registration__button" type="submit">
       Cadastrar
+
+      <img
+        loading="lazy"
+        src="https://img.icons8.com/ios/50/FFFFFF/plus.png"
+        alt="Ícone com uma simbolo de mais para adicionar um novo contato"
+      />
     </button>
   </form>
 </section>
